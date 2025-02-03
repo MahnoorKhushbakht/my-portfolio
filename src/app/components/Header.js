@@ -33,12 +33,21 @@ function Header() {
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link href="/about" passHref legacyBehavior>
-                <a className="nav-link">Behind the Code</a>
+              <Link href="/portfolio" passHref legacyBehavior>
+                <a className="nav-link">Portfolio</a>
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link href="/testimonials" passHref legacyBehavior>
+                <a className="nav-link">Testimonials</a>
               </Link>
             </Nav.Item>
             <NavDropdown title="More" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item>
+              <Link href="/about" passHref legacyBehavior>
+                <a className="nav-link">Behind the Code</a>
+              </Link>  
+              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
