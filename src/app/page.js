@@ -1,7 +1,7 @@
 "use client";
 import { Typewriter } from "react-simple-typewriter";
-import Buttons from "./components/buttons";
 import BackgroundStyle from "./components/BackgroundStyle";
+import TagLine from "./components/TagLine";
 
 export default function Home() {
   return (
@@ -39,7 +39,7 @@ export default function Home() {
 
       {/* Buttons Component */}
       <div className="mt-6 md:ml-20 ml-5">
-        <Buttons />
+        <TagLine/>
       </div>
     </div>
   );

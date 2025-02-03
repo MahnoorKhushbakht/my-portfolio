@@ -70,10 +70,10 @@ export default function Projects(){
         ))}
         </div>
         <div className="mt-6 w-full flex justify-center "> 
-                  <a href={item.liveLink} target="_blank" rel="noopener noreferrer" className="w-full text-center p-2 mr-2 text-md bg-indigo-600 text-indigo-100 hover:bg-indigo-700 rounded-md font-semibold transition duration-300"> 
+                  <a href={item.liveLink} target="_blank" rel="noopener noreferrer" className="no-underline w-full text-center p-2 mr-2 text-md bg-indigo-600 text-indigo-100 hover:bg-indigo-700 rounded-md font-semibold transition duration-300"> 
                     Live Demo
                   </a>
-                  <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="w-full text-center p-2 text-md bg-indigo-600 text-indigo-100 hover:bg-indigo-700 rounded-md font-semibold transition duration-300"> 
+                  <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="no-underline w-full text-center p-2 text-md bg-indigo-600 text-indigo-100 hover:bg-indigo-700 rounded-md font-semibold transition duration-300"> 
                     GitHub
                   </a>
                 </div>
