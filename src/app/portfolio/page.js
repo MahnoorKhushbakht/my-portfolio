@@ -40,7 +40,7 @@ export default function Projects(){
       ];
     return(
         <section className="bg-indigo-900 body-font">
-  <div className="container  mx-auto">
+  <div className="container p-3  mx-auto">
     <div className="flex flex-wrap w-full mb-10">
       <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
         <h1 className="sm:text-3xl text-2xl font-medium title-font mt-10 text-indigo-500">My Web Projects</h1>
