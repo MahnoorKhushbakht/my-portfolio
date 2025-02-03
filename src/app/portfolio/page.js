@@ -40,15 +40,16 @@ export default function Projects(){
       ];
     return(
         <section className="bg-indigo-900 body-font">
-  <div className="container px-5 py-24 mx-auto">
-    <div className="flex flex-wrap w-full mb-20">
+  <div className="container  mx-auto">
+    <div className="flex flex-wrap w-full mb-10">
       <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-indigo-500">My Web Projects</h1>
+        <h1 className="sm:text-3xl text-2xl font-medium title-font mt-10 text-indigo-500">My Web Projects</h1>
         <div className="h-1 w-20 bg-indigo-500 rounded"></div>
-      </div>
       {/* <p className="lg:w-1/2 w-full leading-relaxed text-indigo-300">Projects done successfully for my Clients.</p> */}
+
+      </div>
     </div>
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-1">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
     {projects.map((item, index) => (
       <div key={index} className="bg-indigo-200 p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105">
         <Image
