@@ -14,7 +14,7 @@ export default function Projects(){
             image: "/images/project5.JPG",
             liveLink: 'https://echo-of-thoughts.vercel.app/',
             githubLink: 'https://github.com/MahnoorKhushbakht/blog.git',
-            tags:['Next.js','React.js','Tailwind','Mongodb','Firebase','Tailwind','Prisma ORM','Strapi CMS','NextUI']
+            tags:['Next.js','React.js','Tailwind','Mongodb','Firebase','Prisma ORM','Strapi CMS','NextUI']
           },
         {
           title: 'Marketing Agency',
