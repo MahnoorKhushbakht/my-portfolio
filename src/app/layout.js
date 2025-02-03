@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/Header";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import AOSInitializer from "./components/AOSInitializer";
 
 
 
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-     
+     <AOSInitializer/>
         <header>
         <div className="relative z-50">
  

@@ -10,27 +10,25 @@ export default function About() {
   return (
     <section className="bg-indigo-900 text-white flex justify-center items-center min-h-screen py-20 px-6">
       <div className="container mx-auto flex flex-col items-center">
-        
-        {/* About Me Section */}
-        <div className="text-center mb-6 max-w-2xl">
-          <h1 className="text-4xl font-bold text-indigo-100 mb-4">
-            About Me
-          </h1>
+        <div
+          className="text-center mb-6 max-w-2xl"
+          data-aos="fade-up" 
+        >
+          <h1 className="text-4xl font-bold text-indigo-100 mb-4">About Me</h1>
           <p className="text-lg text-indigo-200 leading-relaxed">
-            Web Developer dedicated to delivering impactful results through innovative solutions and intuitive user experiences. 
-            Proficient in developing responsive web applications, solving user-centric challenges, and leveraging technical 
+            Web Developer dedicated to delivering impactful results through innovative solutions and intuitive user experiences.
+            Proficient in developing responsive web applications, solving user-centric challenges, and leveraging technical
             expertise to create seamless digital solutions.
           </p>
         </div>
 
-        {/* Image Section (Now Centered) */}
-        <div className="flex justify-center">
+        <div className="flex justify-center" data-aos="zoom-in"> 
           <div className="m-5 w-80 h-80 rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-            <Image 
-              alt="feature" 
+            <Image
+              alt="feature"
               className="object-cover w-full h-full"
-              width={500} 
-              height={500} 
+              width={500}
+              height={500}
               src="/images/thumbnail.png"
               quality={100}
               priority
@@ -38,8 +36,10 @@ export default function About() {
           </div>
         </div>
 
-        {/* Skills Section (Centered on Large Screens) */}
-        <div className="flex lg:justify-center w-full max-w-5xl mt-8">
+        <div
+          className="flex lg:justify-center w-full max-w-5xl mt-8"
+          data-aos="fade-left" 
+        >
           <div className="grid lg:grid-cols-1 grid-cols-1 gap-6 items-center text-center w-full lg:w-3/5">
             {skills.map((item, index) => (
               <div key={index} className="w-full">
@@ -50,7 +50,6 @@ export default function About() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

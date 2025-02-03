@@ -9,13 +9,13 @@ export default function Home() {
       <BackgroundStyle/>
       <div className="max-w-screen-lg text-left md:ml-20 ml-5 leading-relaxed md:text-6xl sm:text-4xl font-bold antialiased">
         
-        {/* Console Log Box */}
-        <div className="bg-red-100 text-black text-xs md:text-sm px-3 py-2 rounded-md font-mono inline-block mb-4">
+
+        <div data-aos="fade-right" className="bg-red-100 text-black text-xs md:text-sm px-3 py-2 rounded-md font-mono inline-block mb-4">
           console.log(Welcome!)
         </div>
 
-        {/* Heading */}
-        <h1 className="font-bold md:text-6xl sm:text-4xl text-indigo-200 mb-4">
+      
+        <h1 data-aos="fade-right" className="font-bold md:text-6xl sm:text-4xl text-indigo-200 mb-4">
           Hi there <br />
           I am{" "}
           <a className="underline  text-indigo-400 decoration-indigo-500 underline-offset-3">
@@ -23,8 +23,8 @@ export default function Home() {
           </a>
         </h1>
 
-        {/* Typewriter Effect */}
-        <div className=" md:text-4xl sm:text-3xl text-3xl text-indigo-300">
+        
+        <div data-aos="fade-right" className=" md:text-4xl sm:text-3xl text-3xl text-indigo-300">
           <Typewriter
             words={["Website Developer", "Let's Grow Together!!"]}
             loop={true}
@@ -37,8 +37,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Buttons Component */}
-      <div className="mt-6 md:ml-20 ml-5">
+      
+      <div data-aos="fade-up" className="mt-6 md:ml-20 ml-5">
         <TagLine/>
       </div>
     </div>

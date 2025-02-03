@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-export default function Reviews() {  
-
+export default function Reviews() {
   const data = [
     {
       name: "Promise Emmanuel",
@@ -14,7 +13,6 @@ export default function Reviews() {
       image: "/images/neskomedia.jpeg",
       subtitle: "Nesko Media",
       text: "I had the pleasure of working with Mahnoor on a website project for my Digits Marketing Agency, and I highly recommend her services. Mahnoor's ability to create amazing websites is evident in the project she completed for us.",
-    // Her professionalism and attention to detail ensured that the website not only met but exceeded our expectations. Mahnoor's expertise in website development is impressive, and her dedication to delivering exceptional results is commendable. It was a pleasure working with her, and I look forward to future collaborations.
     },
     {
       name: "Vivek Kumar",
@@ -29,7 +27,12 @@ export default function Reviews() {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4">
           {data.map((review, index) => (
-            <div key={index} className="lg:w-1/3 lg:mb-0 mb-6 p-4">
+            <div
+              key={index}
+              className="lg:w-1/3 lg:mb-0 mb-6 p-4"
+              data-aos={index % 2 === 0 ? "fade-up" : "fade-right"}
+              data-aos-duration="1000" 
+            >
               <div className="h-full text-center">
                 <Image
                   width={80}
