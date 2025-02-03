@@ -15,7 +15,7 @@ export default function Home() {
         </div>
 
       
-        <h1 data-aos="fade-right" className="font-bold md:text-6xl sm:text-4xl text-indigo-200 mb-4">
+        <h1 data-aos="fade-right" className="font-bold md:text-6xl sm:text-6xl text-indigo-200 mb-4">
           Hi there <br />
           I am{" "}
           <a className="underline  text-indigo-400 decoration-indigo-500 underline-offset-3">
