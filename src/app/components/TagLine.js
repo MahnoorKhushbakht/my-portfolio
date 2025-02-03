@@ -19,7 +19,7 @@ export default function TagLine() {
         {item.tags.map((data, index) => (
           <span
             key={index}
-            className="bg-indigo-300 text-indigo-900 px-4 py-2 rounded-full shadow-md 
+            className="bg-indigo-300 text-indigo-900 px-2 py-2 rounded-full shadow-md 
                        text-sm sm:text-base font-medium m-1 transition-transform duration-300 ease-in-out 
                        hover:scale-105 hover:bg-indigo-400"
           >
