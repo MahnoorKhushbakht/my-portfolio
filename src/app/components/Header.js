@@ -46,6 +46,11 @@ function Header() {
               </Link>
             </Nav.Item>
             <Nav.Item>
+              <Link href="/contact" passHref legacyBehavior>
+                <a className="nav-link" style={linkStyles}>Contact</a>
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
               <Link href="/career" passHref legacyBehavior>
                 <a className="nav-link" style={linkStyles}>Career</a>
               </Link>
@@ -96,6 +101,11 @@ function Header() {
               <Nav.Item>
                 <Link href="/about" passHref legacyBehavior>
                   <a className="nav-link text-white" onClick={() => setIsOpen(false)}>About</a>
+                </Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link href="/contact" passHref legacyBehavior>
+                  <a className="nav-link text-white" onClick={() => setIsOpen(false)}>Contact</a>
                 </Link>
               </Nav.Item>
               <Nav.Item>
