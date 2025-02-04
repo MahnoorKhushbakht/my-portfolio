@@ -8,7 +8,7 @@ export default function About() {
   ];
 
   return (
-    <section className="bg-indigo-900 text-white flex justify-center items-center min-h-screen ">
+    <section className="bg-indigo-900 text-white flex justify-center items-center min-h-screen overflow-hidden">
       <div className="container mx-auto flex flex-col items-center py-20 px-6">
         <div
           className="text-center mb-6 max-w-2xl"
