@@ -68,7 +68,8 @@ export default function Contact() {
           marginWidth="0"
           title="map"
           scrolling="no"
-          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+          loading="lazy" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.59571767033!2d73.07424127450109!3d33.641723073314296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95289173d60b%3A0x73762b80ed99523e!2s6th%20Rd%20Flyover%2C%20Rawalpindi%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1738694539304!5m2!1sen!2s"
           style={{ filter: "grayscale(1) contrast(1.2) opacity(0.4)" }}
         ></iframe>
       </div>
@@ -149,8 +150,8 @@ export default function Contact() {
               {statusMessage}
             </p>
           )}
-          <p className="text-xs text-indigo-500 mt-3">
-            We appreciate your feedback and aim to respond promptly. Thank you for connecting with us!
+          <p className="text-xs text-indigo-400 mt-3">
+            I appreciate your feedback and aim to respond promptly. Thank you for connecting!
           </p>
         </div>
       </div>

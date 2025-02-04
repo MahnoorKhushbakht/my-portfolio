@@ -92,7 +92,7 @@ function Header() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden fixed top-16 left-0 w-full backdrop-blur-md bg-indigo-500/50 p-3 z-50"
           >
-            <Nav className="flex flex-col space-y-3 text-center">
+            <Nav className="flex flex-col space-y-3 text-center overflow-hidden">
               <Nav.Item>
                 <Link href="/" passHref legacyBehavior>
                   <a className="nav-link text-white" onClick={() => setIsOpen(false)}>Home</a>
