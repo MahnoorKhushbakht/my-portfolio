@@ -150,7 +150,7 @@ export default function Contact() {
               {statusMessage}
             </p>
           )}
-          <p className="text-xs text-indigo-400 mt-3">
+          <p className="text-xs text-indigo-200 mt-3">
             I appreciate your feedback and aim to respond promptly. Thank you for connecting!
           </p>
         </div>
