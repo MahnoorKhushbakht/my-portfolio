@@ -8,9 +8,7 @@ export default function TagLine() {
         "Firebase",
         "Prisma ORM",
         "Strapi CMS",
-        "Chakra UI",
-        "Material UI",
-        "Express",
+        "Express.js",
       ],
     };
   
