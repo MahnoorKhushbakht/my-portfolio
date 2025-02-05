@@ -13,7 +13,7 @@ export default function TagLine() {
     };
   
     return (
-      <div className="flex flex-wrap  w-full sm:w-3/4 lg:w-2/3 xl:w-1/2 mt-2">
+      <div className="flex flex-wrap  w-full sm:w-3/4 lg:w-2/3 xl:w-1/2 mt-1">
         {item.tags.map((data, index) => (
           <span
             key={index}

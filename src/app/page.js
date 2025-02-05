@@ -42,7 +42,7 @@ export default function Home() {
       </div>
 
       
-      <div data-aos="fade-up" className="mt-6 md:ml-20 ml-5">
+      <div data-aos="fade-up" className="mt-4 md:ml-20 ml-5">
         <TagLine/>
       </div>
     </div>
