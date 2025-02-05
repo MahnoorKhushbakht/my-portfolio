@@ -1,20 +1,17 @@
 "use client";
+
 import { useState } from "react";
 
 export default function ResumeButton() {
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleDownload = async (event) => {
-    event.preventDefault();
-    
-    if (isLoading) return; 
-
+  const handleDownload = () => {
+    if (isLoading) return;
     setIsLoading(true);
 
- 
     setTimeout(() => {
       const link = document.createElement("a");
-      link.href = "/docs/MahnoorKhushbakht_CV.pdf"; 
+      link.href = "/docs/MahnoorKhushbakht_CV.pdf";
       link.download = "MahnoorKhushbakht_CV.pdf";
       document.body.appendChild(link);
       link.click();
@@ -26,14 +23,12 @@ export default function ResumeButton() {
   return (
     <button
       onClick={handleDownload}
-      className={`w-32 relative p-2 text-md bg-indigo-200 text-indigo-600 hover:bg-indigo-300 shadow-md font-semibold rounded-md flex items-center justify-center transition-all ${
-        isLoading ? "opacity-50 cursor-not-allowed" : ""
-      }`}
+      className="w-32 p-2 text-md bg-indigo-500 text-white hover:bg-indigo-600 shadow-md font-semibold rounded-md transition-all flex items-center justify-center"
       disabled={isLoading}
     >
       {isLoading ? (
         <svg
-          className="animate-spin h-5 w-5 text-indigo-600"
+          className="animate-spin h-5 w-5 mr-2 text-white"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"

@@ -5,8 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/Header";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import AOSInitializer from "./components/AOSInitializer";
-
-
+import Script from "next/script";
 
 
 const geistSans = Geist({
@@ -49,7 +48,25 @@ export default function RootLayout({ children }) {
         <footer>
           <Footer/>
         </footer>
-      
+        <Script
+          id="chatbot-config"
+          strategy="beforeInteractive" 
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.embeddedChatbotConfig = {
+                chatbotId: "ckTGG9U828rsA7ZqMv6dA",
+                domain: "www.chatbase.co",
+              };
+            `,
+          }}
+        />
+        <Script
+          src="https://www.chatbase.co/embed.min.js"
+          strategy="lazyOnload" 
+          chatbotId="ckTGG9U828rsA7ZqMv6dA"
+          domain="www.chatbase.co"
+          defer
+        />
       </body>
     </html>
   );
