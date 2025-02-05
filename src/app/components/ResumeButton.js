@@ -11,7 +11,7 @@ export default function ResumeButton() {
 
     setTimeout(() => {
       const link = document.createElement("a");
-      link.href = "/docs/MahnoorKhushbakht_CV.pdf";
+      link.href = process.env.NEXT_PUBLIC_PDF_URL;
       link.download = "MahnoorKhushbakht_CV.pdf";
       document.body.appendChild(link);
       link.click();
