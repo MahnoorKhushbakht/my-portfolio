@@ -17,6 +17,12 @@
 /.next/
 /out/
 
+# Ignore test files
+**/*.test.js
+**/*.test.ts
+**/__tests__/
+
+
 # production
 /build
 
