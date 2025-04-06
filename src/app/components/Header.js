@@ -50,7 +50,7 @@ function Header() {
               className="relative cursor-pointer text-indigo-100"
             >
                               <button
-                  className="nav-link text-white"
+                  className="nav-link text-white" data-testid='dropDown'
                   onClick={() => setDropdownOpen(!dropdownOpen)}
                 >
                   Dropdown ▼
@@ -84,9 +84,9 @@ function Header() {
           <div className="hidden md:block">
             <ResumeButton />
           </div>
-          <button
+          <button data-testid="mobile-menu"
             className="md:hidden text-white text-2xl"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen(!isOpen)} 
           >
             <FaBars />
           </button>
@@ -96,6 +96,7 @@ function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

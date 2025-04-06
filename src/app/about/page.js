@@ -15,7 +15,7 @@ export default function About() {
           data-aos="fade-up" 
         >
           <h1 className="text-4xl font-bold text-indigo-100 mb-4">About Me</h1>
-          <p className="text-lg text-indigo-200 leading-relaxed">
+          <p data-testid='para' className="text-lg text-indigo-200 leading-relaxed">
             Web Developer dedicated to delivering impactful results through innovative solutions and intuitive user experiences.
             Proficient in developing responsive web applications, solving user-centric challenges, and leveraging technical
             expertise to create seamless digital solutions.

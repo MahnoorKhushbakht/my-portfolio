@@ -28,7 +28,7 @@ export default function BackgroundStyle() {
         <motion.div
           whileHover={{ opacity: 0.5 }}  
           initial={{ opacity: 0 }}       
-          whileInView={{ opacity: 0.2 }} 
+          whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.2 }} 
           animate={{ transform: `translateY(${item.y}px)` }}  
           key={index} 

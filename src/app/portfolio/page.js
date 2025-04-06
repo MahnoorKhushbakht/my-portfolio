@@ -12,7 +12,7 @@ export default function Projects() {
     {
       title: 'Echoes of Thoughts',
       image: "/images/project5.JPG",
-      liveLink: 'https://echo-of-thoughts.vercel.app/',
+      liveLink: 'https://echoesofthoughts.vercel.app/',
       githubLink: 'https://github.com/MahnoorKhushbakht/blog.git',
       tags:['Next.js','React.js','Tailwind','Mongodb','Firebase','Prisma ORM','Strapi CMS','NextUI']
     },
