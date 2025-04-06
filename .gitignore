@@ -21,6 +21,7 @@
 **/*.test.js
 **/*.test.ts
 **/__tests__/
+**/mockServices/
 
 
 # production
