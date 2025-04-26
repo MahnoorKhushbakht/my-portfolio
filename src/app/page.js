@@ -34,9 +34,9 @@ export default function Home() {
             loop={true}
             cursor
             cursorStyle="|"
-            typeSpeed={50}
-            deleteSpeed={40}
-            delaySpeed={1000}
+            typeSpeed={40}
+            deleteSpeed={60}
+            delaySpeed={2000}
           />
         </div>
       </div>
