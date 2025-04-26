@@ -30,7 +30,7 @@ export default function Home() {
         
         <div data-aos="fade-right" className=" md:text-4xl sm:text-3xl text-3xl text-indigo-300">
           <Typewriter
-            words={["Website Developer", "Let's Grow Together!!"]}
+            words={["Frontend Developer", "Let's Grow Together!!"]}
             loop={true}
             cursor
             cursorStyle="|"
