@@ -26,8 +26,8 @@ export default function Projects() {
     {
       title: 'Tailored Gents',
       image: "/images/project3.JPG",
-      liveLink: 'https://mens-clothing.vercel.app/',
-      githubLink: 'https://github.com/MahnoorKhushbakht/mens-clothing.git',
+      liveLink: 'https://tailored-gents.vercel.app/',
+      githubLink: 'https://github.com/MahnoorKhushbakht/tailored-gents.git',
       tags:['Next.js','React.js','Tailwind','Mongodb','Wordpress','JWT','Tailwind']
     },
     {
