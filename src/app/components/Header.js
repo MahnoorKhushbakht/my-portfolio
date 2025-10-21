@@ -3,10 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaUser, FaEnvelope, FaChevronDown, FaBriefcase, FaFolder, FaStar } from "react-icons/fa";
 import ResumeButton from "./ResumeButton";
 
 function Header() {
@@ -14,149 +11,171 @@ function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <Navbar expand="lg" className="bg-indigo-400 md:p-1 p-2">
-      <Container className="grid grid-cols-3 items-center">
-        <div className="flex items-center">
-          <Navbar.Brand href="/">
-            <Image
-              src="/images/mk.png"
-              width="35"
-              height="35"
-              className="d-inline-block align-top"
-              alt="avatar"
-            />
-          </Navbar.Brand>
-        </div>
+    <header className="bg-transparent absolute top-0 left-0 right-0 z-40">
+      <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src="/images/mk.png"
+            width="40"
+            height="40"
+            alt="Logo"
+            className="rounded-full"
+          />
+        </Link>
 
-        <div className="hidden md:flex justify-center">
-          <Nav className="flex space-x-4">
-            <Nav.Item>
-              <Link href="/" passHref legacyBehavior>
-                <a className="nav-link text-white">Home</a>
-              </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link href="/about" passHref legacyBehavior>
-                <a className="nav-link text-white">About</a>
-              </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link href="/contact" passHref legacyBehavior>
-                <a className="nav-link text-white">Contact</a>
-              </Link>
-            </Nav.Item>
+        {/* Drawer Icon */}
+        <button
+          onClick={() => setIsOpen(true)}
+          className="text-white text-2xl hover:opacity-80 transition-opacity bg-black/20 p-2 rounded-lg backdrop-blur-sm"
+          aria-label="Open Menu"
+        >
+          <FaBars />
+        </button>
+      </div>
 
-            <div
-              className="relative cursor-pointer text-indigo-100"
-            >
-                              <button
-                  className="nav-link text-white" data-testid='dropDown'
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
-                >
-                  Dropdown ▼
-                </button>
-            
-              {dropdownOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute left-0 mt-2 bg-indigo-500 text-white text-center shadow-lg rounded-md p-2 w-40"
-                >
-                  <Link href="/career" passHref legacyBehavior>
-                    <a className="block py-1 px-2 hover:bg-indigo-600 text-white no-underline rounded">Career</a>
-                  </Link>
-                  <Link href="/portfolio" passHref legacyBehavior>
-                    <a className="block py-1 px-2 hover:bg-indigo-600 text-white no-underline rounded">Portfolio</a>
-                  </Link>
-                  <div className="border-t border-indigo-300 my-1"></div>
-                  <Link href="/testimonials" passHref legacyBehavior>
-                    <a className="block py-1 px-2 hover:bg-indigo-600 text-white no-underline rounded">Testimonials</a>
-                  </Link>
-                </motion.div>
-              )}
-            </div>
-          </Nav>
-        </div>
-
-        <div className="flex items-center justify-end space-x-3">
-          <div className="hidden md:block">
-            <ResumeButton />
-          </div>
-          <button data-testid="mobile-menu"
-            className="md:hidden text-white text-2xl"
-            onClick={() => setIsOpen(!isOpen)} 
-          >
-            <FaBars />
-          </button>
-        </div>
-      </Container>
-
+      {/* Enhanced Drawer */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <>
+            {/* Backdrop Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            />
             
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden fixed top-14 left-0 w-full backdrop-blur-md bg-indigo-500/50 p-3 z-50 rounded-sm"
-          >
-            <Nav className="flex flex-col space-y-3 text-center">
-              <Nav.Item>
-                <Link href="/" passHref legacyBehavior>
-                  <a className="nav-link text-white" onClick={() => setIsOpen(false)}>Home</a>
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link href="/about" passHref legacyBehavior>
-                  <a className="nav-link text-white" onClick={() => setIsOpen(false)}>About</a>
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link href="/contact" passHref legacyBehavior>
-                  <a className="nav-link text-white" onClick={() => setIsOpen(false)}>Contact</a>
-                </Link>
-              </Nav.Item>
-
-              <div className="relative">
+            {/* Drawer */}
+            <motion.aside
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ 
+                duration: 0.4, 
+                ease: [0.25, 0.1, 0.25, 1.0] 
+              }}
+              className="fixed top-0 right-0 w-80 h-full bg-gradient-to-b from-gray-900 to-gray-800 text-white z-50 shadow-2xl flex flex-col"
+            >
+              {/* Drawer Header */}
+              <div className="flex justify-between items-center p-6 border-b border-gray-700">
+                <div className="flex items-center space-x-3">
+                  <Image
+                    src="/images/mk.png"
+                    width="40"
+                    height="40"
+                    alt="Logo"
+                    className="rounded-full"
+                  />
+                  <h2 className="text-xl font-bold text-white">
+                    Menu
+                  </h2>
+                </div>
                 <button
-                  className="text-white"
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Close Menu"
+                  className="text-gray-400 hover:text-white transition-all duration-200 p-2 hover:bg-gray-700 rounded-lg"
                 >
-                  Dropdown ▼
+                  <FaTimes className="w-5 h-5" />
                 </button>
-                {dropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="bg-indigo-600 text-white rounded-md p-2 mt-2"
-                  >
-                    <Link href="/career" passHref legacyBehavior>
-                      <a className="block py-1 px-2 text-white rounded no-underline">Career</a>
-                    </Link>
-                    <Link href="/portfolio" passHref legacyBehavior>
-                      <a className="block py-1 px-2 text-white rounded no-underline">Portfolio</a>
-                    </Link>
-                    <div className="border-t border-indigo-400 my-1"></div>
-                    <Link href="/testimonials" passHref legacyBehavior>
-                      <a className="block py-1 px-2 text-white rounded no-underline">Testimonials</a>
-                    </Link>
-                  </motion.div>
-                )}
               </div>
 
-              <div className="mt-3 flex justify-center">
+              {/* Drawer Navigation */}
+              <nav className="flex-1 p-6 space-y-2 overflow-y-auto">
+                <Link
+                  href="/"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200 group no-underline"
+                >
+                  <FaHome className="text-gray-400 group-hover:text-white transition-colors" />
+                  <span className="font-medium text-white">Home</span>
+                </Link>
+
+                <Link
+                  href="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200 group no-underline"
+                >
+                  <FaUser className="text-gray-400 group-hover:text-white transition-colors" />
+                  <span className="font-medium text-white">About</span>
+                </Link>
+
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200 group no-underline"
+                >
+                  <FaEnvelope className="text-gray-400 group-hover:text-white transition-colors" />
+                  <span className="font-medium text-white">Contact</span>
+                </Link>
+
+                {/* Enhanced Dropdown Section */}
+                <div className="relative">
+                  <button
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200 group no-underline"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <FaBriefcase className="text-gray-400 group-hover:text-white transition-colors" />
+                      <span className="font-medium text-white">Portfolio</span>
+                    </div>
+                    <motion.div
+                      animate={{ rotate: dropdownOpen ? 180 : 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <FaChevronDown className="text-gray-400 text-sm" />
+                    </motion.div>
+                  </button>
+                  
+                  <AnimatePresence>
+                    {dropdownOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="ml-8 mt-1 space-y-1 overflow-hidden"
+                      >
+                        <Link
+                          href="/career"
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/30 transition-all duration-200 group no-underline"
+                        >
+                          <FaBriefcase className="text-gray-400 group-hover:text-white transition-colors text-sm" />
+                          <span className="text-white">Career</span>
+                        </Link>
+                        <Link
+                          href="/portfolio"
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/30 transition-all duration-200 group no-underline"
+                        >
+                          <FaFolder className="text-gray-400 group-hover:text-white transition-colors text-sm" />
+                          <span className="text-white">Projects</span>
+                        </Link>
+                        <Link
+                          href="/testimonials"
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/30 transition-all duration-200 group no-underline"
+                        >
+                          <FaStar className="text-gray-400 group-hover:text-white transition-colors text-sm" />
+                          <span className="text-white">Testimonials</span>
+                        </Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </nav>
+
+              {/* Resume Button Section */}
+              <div className="p-6 border-t border-gray-700">
                 <ResumeButton />
               </div>
-            </Nav>
-          </motion.div>
+            </motion.aside>
+          </>
         )}
       </AnimatePresence>
-    </Navbar>
+    </header>
   );
 }
 

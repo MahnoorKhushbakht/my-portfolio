@@ -40,22 +40,23 @@ export default function Projects() {
   ];
 
   return (
-    <section className="bg-indigo-900 body-font">
-      <div className="container p-3 mx-auto">
-        <div className="flex flex-wrap w-full mb-10">
-          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mt-10 text-indigo-500">
-              My Web Projects
-            </h1>
-            <div className="h-1 w-20 bg-indigo-500 rounded"></div>
-          </div>
+    <section className="bg-gray-900 body-font min-h-screen py-16">
+      <div className="container px-5 mx-auto">
+           <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent mb-6">
+            My Web Projects
+          </h1>
+          <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
+            A collection of my latest web development projects showcasing modern technologies and clean design
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {projects.map((item, index) => (
             <div
               key={index}
-              className="bg-indigo-200 p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105"
+              className="bg-gray-200 p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105"
               data-aos="fade-up" 
             >
               <Image
@@ -65,14 +66,14 @@ export default function Projects() {
                 width={500}
                 height={300}
               />
-              <h3 className="tracking-widest text-indigo-500 text-lg font-medium mt-4">
+              <h3 className="tracking-widest text-gray-500 text-lg font-medium mt-4">
                 {item.title}
               </h3>
               <div className="flex flex-wrap w-auto">
                 {item.tags.map((data, index) => (
                   <span
                     key={index}
-                    className="bg-indigo-300 mr-2 mt-2 rounded-full text-indigo-900 w-auto p-2"
+                    className="bg-gray-300 mr-2 mt-2 rounded-full text-gray-900 w-auto p-2"
                   >
                     {data}
                   </span>
@@ -83,7 +84,7 @@ export default function Projects() {
                   href={item.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="no-underline w-full text-center p-2 mr-2 text-md bg-indigo-600 text-indigo-100 hover:bg-indigo-700 rounded-md font-semibold transition duration-300"
+                  className="no-underline w-full text-center p-2 mr-2 text-md bg-gray-600 text-gray-100 hover:bg-gray-700 rounded-md font-semibold transition duration-300"
                 >
                   Live Demo
                 </a>
@@ -91,13 +92,21 @@ export default function Projects() {
                   href={item.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="no-underline w-full text-center p-2 text-md bg-indigo-600 text-indigo-100 hover:bg-indigo-700 rounded-md font-semibold transition duration-300"
+                  className="no-underline w-full text-center p-2 text-md bg-gray-600 text-gray-100 hover:bg-gray-700 rounded-md font-semibold transition duration-300"
                 >
                   GitHub
                 </a>
               </div>
             </div>
           ))}
+        </div>
+         <div className="text-center mt-16">
+          <p className="text-gray-500 text-sm">
+            Interested in working together?{" "}
+            <a href="/contact" className="text-gray-300 hover:text-white underline transition-colors duration-300">
+              Lets talk
+            </a>
+          </p>
         </div>
       </div>
     </section>

@@ -18,9 +18,9 @@ export default function TagLine() {
           <span
             role="span"
             key={index}
-            className="bg-indigo-300 text-indigo-900 px-2 py-2 rounded-full shadow-md 
+            className="bg-gray-300 text-gray-900 px-2 py-2 rounded-full shadow-md 
                        text-sm sm:text-base font-medium m-1 transition-transform duration-300 ease-in-out 
-                       hover:scale-105 hover:bg-indigo-400"
+                       hover:scale-105 hover:bg-gray-400"
           >
             {data}
           </span>

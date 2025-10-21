@@ -23,7 +23,7 @@ export default function ResumeButton() {
   return (
     <button
       onClick={handleDownload}
-      className="w-32 p-2 text-md bg-indigo-500 text-white hover:bg-indigo-600 shadow-md font-semibold rounded-md transition-all flex items-center justify-center"
+      className="w-32 p-2 text-md bg-gray-500 text-white hover:bg-gray-600 shadow-md font-semibold rounded-md transition-all flex items-center justify-center"
       disabled={isLoading}
     >
       {isLoading ? (

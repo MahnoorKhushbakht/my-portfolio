@@ -23,8 +23,18 @@ export default function Reviews() {
   ];
 
   return (
-    <section className="text-gray-400 bg-indigo-900 body-font">
-      <div className="container px-5 py-24 mx-auto">
+    <section className="text-gray-400 bg-gradient-to-br from-gray-900 to-gray-800 body-font py-24">
+      <div className="container px-5 mx-auto">
+
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent mb-4">
+            Client Testimonials
+          </h1>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            What clients say about working with me
+          </p>
+        </div>
         <div className="flex flex-wrap -m-4">
           {data.map((review, index) => (
             <div
@@ -42,12 +52,25 @@ export default function Reviews() {
                   src={review.image}
                 />
                 <p className="leading-relaxed">{review.text}</p>
-                <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                <span className="inline-block h-1 w-10 rounded bg-gray-500 mt-6 mb-4"></span>
                 <h2 className="text-white font-medium title-font tracking-wider text-sm">{review.name}</h2>
                 <p className="text-gray-500">{review.subtitle}</p>
               </div>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to start your project?
+            </h3>
+            <p className="text-gray-400 mb-6 text-lg">
+              Join satisfied clients who have brought their ideas to life
+            </p>
+            <button href='/contact' className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get In Touch
+            </button>
+          </div>
         </div>
       </div>
     </section>

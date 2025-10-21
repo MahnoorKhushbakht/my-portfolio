@@ -8,14 +8,21 @@ export default function About() {
   ];
 
   return (
-    <section className="bg-indigo-900 text-white flex justify-center items-center min-h-screen overflow-hidden">
+    <section className="bg-gray-900 text-white flex justify-center items-center min-h-screen overflow-hidden">
       <div className="container mx-auto flex flex-col items-center py-20 px-6">
         <div
           className="text-center mb-6 max-w-2xl"
           data-aos="fade-up" 
         >
-          <h1 className="text-4xl font-bold text-indigo-100 mb-4">About Me</h1>
-          <p data-testid='para' className="text-lg text-indigo-200 leading-relaxed">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent mb-4">About Me</h1>
+         <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
+          
+      
+          <p className="text-xl font-semibold text-white mb-6">
+            Full Stack Developer specializing in the MERN stack, with a passion for creating seamless user experiences from frontend to backend.
+          </p>
+
+          <p data-testid='para' className="text-lg text-gray-200 leading-relaxed">
             Web Developer dedicated to delivering impactful results through innovative solutions and intuitive user experiences.
             Proficient in developing responsive web applications, solving user-centric challenges, and leveraging technical
             expertise to create seamless digital solutions.
@@ -43,7 +50,7 @@ export default function About() {
           <div className="grid lg:grid-cols-1 grid-cols-1 gap-6 items-center text-center w-full lg:w-3/5">
             {skills.map((item, index) => (
               <div key={index} className="w-full">
-                <div className="bg-indigo-800 text-indigo-200 shadow-lg hover:scale-105 transition-transform duration-300 rounded-lg p-5 flex items-center justify-center">
+                <div className="bg-gray-800 text-gray-200 shadow-lg hover:scale-105 transition-transform duration-300 rounded-lg p-5 flex items-center justify-center">
                   <span className="text-lg font-medium">{item.text}</span>
                 </div>
               </div>
