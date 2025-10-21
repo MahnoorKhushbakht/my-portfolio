@@ -1,7 +1,6 @@
 'use client';
 import { useState } from "react";
 
-
 export default function Contact() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL_Contact;
   const [formData, setFormData] = useState({ email: '', message: '' });
@@ -58,8 +57,8 @@ export default function Contact() {
   };
 
   return (
-    <section className="text-gray-600 body-font relative">
-      <div className="absolute inset-0 bg-gray-100">
+    <section className="text-gray-400 body-font relative">
+      <div className="absolute inset-0 bg-gray-900">
         <iframe
           width="100%"
           height="100%"
@@ -70,18 +69,18 @@ export default function Contact() {
           scrolling="no"
           loading="lazy" 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.59571767033!2d73.07424127450109!3d33.641723073314296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95289173d60b%3A0x73762b80ed99523e!2s6th%20Rd%20Flyover%2C%20Rawalpindi%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1738694539304!5m2!1sen!2s"
-          style={{ filter: "grayscale(1) contrast(1.2) opacity(0.4)" }}
+          style={{ filter: "grayscale(1) contrast(1.2) opacity(0.3)" }}
         ></iframe>
       </div>
       <div className="container px-2 py-24 mx-auto flex">
-        <div className="lg:w-1/3 md:w-1/2 bg-gray-400 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
-          <h2 className="text-gray-100 text-lg mb-1 font-medium title-font">Get in Touch</h2>
-          <p className="leading-relaxed mb-5 text-gray-100">
-            I’d love to hear from you! Feel free to reach out with your thoughts, questions, or suggestions.
+        <div className="lg:w-1/3 md:w-1/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+          <h2 className="text-white text-lg mb-1 font-medium title-font">Get in Touch</h2>
+          <p className="leading-relaxed mb-5 text-gray-300">
+            I'd love to hear from you! Feel free to reach out with your thoughts, questions, or suggestions.
           </p>
           <form onSubmit={handleSubmit}>
             <div className="relative mb-4">
-              <label htmlFor="email" className="leading-7 text-sm text-gray-200">
+              <label htmlFor="email" className="leading-7 text-sm text-gray-300">
                 Email
               </label>
               <input
@@ -91,11 +90,11 @@ export default function Contact() {
                 placeholder="someone@example.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full bg-gray-200 rounded border border-gray-300 focus:border-gray-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-red-400 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder-gray-500"
+                className="w-full bg-gray-700 rounded border border-gray-600 focus:border-gray-500 focus:ring-2 focus:ring-gray-500 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder-gray-400"
               />
             </div>
             <div className="relative mb-4">
-              <label htmlFor="message" className="leading-7 text-sm text-gray-200">
+              <label htmlFor="message" className="leading-7 text-sm text-gray-300">
                 Message
               </label>
               <textarea
@@ -104,37 +103,37 @@ export default function Contact() {
                 placeholder="Your message here..."
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full bg-gray-200 rounded border border-gray-300 focus:border-gray-500 focus:ring-2 focus:ring-gray-200 h-32 text-base outline-none text-gray-400 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out placeholder-gray-500"
+                className="w-full bg-gray-700 rounded border border-gray-600 focus:border-gray-500 focus:ring-2 focus:ring-gray-500 h-32 text-base outline-none text-white py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out placeholder-gray-400"
               ></textarea>
             </div>
             <button
               type="submit"
               aria-label="Send feedback"
-              className="text-gray-400 bg-gray-100 w-full border-0 py-2 px-6 focus:outline-none hover:bg-gray-500 hover:text-gray-100 rounded text-lg"
+              className="text-white bg-gray-700 w-full border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 hover:text-white rounded text-lg transition-colors duration-200"
               disabled={loading}
             >
               {loading ? (
                 <div className="flex justify-center">
-                            <svg
-            className="animate-spin h-5 w-5 text-gray-600"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-            ></circle>
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 11-8 8z"
-            ></path>
-          </svg>
+                  <svg
+                    className="animate-spin h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 11-8 8z"
+                    ></path>
+                  </svg>
                 </div>
               ) : (
                 'Send'
@@ -144,13 +143,13 @@ export default function Contact() {
           {statusMessage && (
             <p
               className={`text-sm mt-3 ${
-                statusType === 'success' ? 'text-green-500' : 'text-red-500'
+                statusType === 'success' ? 'text-green-400' : 'text-red-400'
               }`}
             >
               {statusMessage}
             </p>
           )}
-          <p className="text-xs text-gray-200 mt-3">
+          <p className="text-xs text-gray-400 mt-3">
             I appreciate your feedback and aim to respond promptly. Thank you for connecting!
           </p>
         </div>

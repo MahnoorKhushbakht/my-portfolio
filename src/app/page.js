@@ -16,20 +16,20 @@ export default function Home() {
 
       
         <h1
-  data-aos="fade-right"
-  className="font-bold text-4xl sm:text-5xl md:text-6xl text-gray-200 mb-4"
->
-  Hi there <br />
-  I am{" "}
-  <a className="underline text-gray-400 decoration-gray-500 underline-offset-3">
-    Mahnoor Khushbakht
-  </a>
-</h1>
+          data-aos="fade-right"
+          className="font-bold text-4xl sm:text-5xl md:text-6xl text-gray-200 mb-4"
+        >
+          Hi there <br />
+          I am{" "}
+          <a className="underline text-gray-400 decoration-gray-500 underline-offset-3">
+            Mahnoor Khushbakht
+          </a>
+        </h1>
 
 
         
         <div data-aos="fade-right" className=" md:text-4xl sm:text-3xl text-3xl text-gray-300">
- <Typewriter
+          <Typewriter
             words={["Frontend Developer", "Full Stack Developer", "MERN Stack Specialist", "Let's Build Together!"]}
             loop={true}
             cursor

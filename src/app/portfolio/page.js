@@ -59,13 +59,15 @@ export default function Projects() {
               className="bg-gray-200 p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105"
               data-aos="fade-up" 
             >
-              <Image
-                className="w-full h-48 object-cover rounded-lg"
-                src={item.image}
-                alt={item.title}
-                width={500}
-                height={300}
-              />
+              <div className="w-full h-48 relative rounded-lg overflow-hidden">
+                <Image
+                  className="object-cover"
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <h3 className="tracking-widest text-gray-500 text-lg font-medium mt-4">
                 {item.title}
               </h3>
