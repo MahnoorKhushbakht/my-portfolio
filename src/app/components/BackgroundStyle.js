@@ -23,7 +23,7 @@ export default function BackgroundStyle() {
   ];
 
   return (
-    <div className="absolute inset-0 md:overflow-visible overflow-hidden z-0 grid grid-cols-7 min-h-screen min-w-full gap-6">
+    <div className="absolute inset-0 overflow-visible z-0 grid grid-cols-7 min-h-screen min-w-full gap-6">
       {webIcons.map((item, index) => (
         <motion.div
           whileHover={{ opacity: 0.5 }}  
