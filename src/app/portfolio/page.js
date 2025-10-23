@@ -40,7 +40,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="bg-gray-900 body-font min-h-screen py-16">
+    <section className="bg-gray-900 body-font min-h-screen py-24">
       <div className="container px-5 mx-auto">
            <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent mb-6">
