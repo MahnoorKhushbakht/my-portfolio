@@ -23,7 +23,7 @@ export default function BackgroundStyle() {
   ];
 
   return (
-    <div className="absolute inset-0 overflow-visible z-0 grid grid-cols-7 min-h-screen min-w-full gap-6">
+    <div className="absolute inset-0 md:overflow-visible overflow-hidden z-0 grid grid-cols-7 min-h-screen min-w-full gap-6">
       {webIcons.map((item, index) => (
         <motion.div
           whileHover={{ opacity: 0.5 }}  
@@ -32,9 +32,11 @@ export default function BackgroundStyle() {
           transition={{ delay: 0.5, duration: 0.2 }} 
           animate={{ transform: `translateY(${item.y}px)` }}  
           key={index} 
-          className={` rounded-full w-20 md:w-40 h-20 md:h-40 z-0`}
+          className="rounded-full w-20 md:w-40 h-20 md:h-40 z-0 flex items-center justify-center"
         >
-          {item.icon}
+          <div className="w-full h-full flex items-center justify-center">
+            {item.icon}
+          </div>
         </motion.div>
       ))}
     </div>
