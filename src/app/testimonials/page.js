@@ -67,9 +67,11 @@ export default function Reviews() {
             <p className="text-gray-400 mb-6 text-lg">
               Join satisfied clients who have brought their ideas to life
             </p>
-            <button href='/contact' className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+             <a href="/contact">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get In Touch
             </button>
+            </a>
           </div>
         </div>
       </div>
