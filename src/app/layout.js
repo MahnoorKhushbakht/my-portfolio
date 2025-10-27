@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mahnoor Khushbakht | Frontend Developer",
-  description: "A passionate frontend developer crafting user-friendly and results-driven websites. Explore my portfolio to see my latest projects and expertise in Next.js, Tailwind CSS, and modern web technologies.",
+  title: "Mahnoor Khushbakht - Developer Portfolio",
+  description: "Skilled in React.js, Next.js, Node.js, MongoDB, and modern web technologies. Building responsive, user-friendly applications across frontend and full stack development.",
 };
 
 
