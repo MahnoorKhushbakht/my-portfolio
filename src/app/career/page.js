@@ -24,12 +24,14 @@ export default function Experience() {
   ];
 
   return (
-    <section className="text-gray-300 bg-gray-900 body-font min-h-screen py-24">
-      <div className="container px-5 mx-auto">
-     <div className="text-center mb-16">
-           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent mb-4">Career Timeline</h1>
+    <section className="text-gray-300 bg-gray-900 body-font min-h-screen py-24 overflow-x-hidden">
+      <div className="container px-4 mx-auto max-w-4xl">
+        <div className="text-center mb-16">
+          <h1 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent mb-4">
+            Career Timeline
+          </h1>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed">
             Key roles, accomplishments, and learning experiences throughout my career
           </p>
         </div>
@@ -37,39 +39,43 @@ export default function Experience() {
           {data.map((item, index) => (
             <div
               key={index}
-              className="py-8 flex flex-wrap md:flex-nowrap"
+              className="py-8 flex flex-col items-center text-center"
               data-aos={index % 2 === 0 ? "fade-left" : "fade-right"} 
             >
-              <div className="md:w-64 md:mb-0 mb-4 flex-shrink-0 flex flex-col">
-                <span className="font-semibold title-font text-gray-600">
+              <div className="mb-4 flex-shrink-0 flex flex-col">
+                <span className="font-semibold title-font text-gray-600 text-lg">
                   {item.category}
                 </span>
               </div>
-              <div className="md:flex-grow">
-                <h2 className="text-2xl font-medium text-gray-300 title-font ">
+              <div className="w-full">
+                <h2 className="text-2xl font-medium text-gray-300 title-font mb-4">
                   {item.title}
                 </h2>
-                <p className="leading-relaxed">{item.description}</p>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-200 inline-flex items-center mt-4"
-                >
-                  Learn More
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                <p className="leading-relaxed text-center max-w-3xl mx-auto">
+                  {item.description}
+                </p>
+                <div className="text-center mt-4">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-200 inline-flex items-center justify-center hover:text-white transition-colors duration-200"
                   >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                    Learn More
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
