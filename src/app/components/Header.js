@@ -30,12 +30,16 @@ function Header() {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
     } else {
       document.body.style.overflow = 'unset';
+      document.body.style.position = 'unset';
     }
     
     return () => {
       document.body.style.overflow = 'unset';
+      document.body.style.position = 'unset';
     };
   }, [isOpen]);
 
@@ -43,13 +47,13 @@ function Header() {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-gray-900/80 backdrop-blur-md" 
+          ? "bg-gray-900/90 backdrop-blur-md" 
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 z-60">
+        <Link href="/" className="flex items-center space-x-2 z-[60]">
           <Image
             src="/images/mk.png"
             width="40"
@@ -62,10 +66,10 @@ function Header() {
         {/* Drawer Icon */}
         <button
           onClick={() => setIsOpen(true)}
-          className={`text-white text-2xl hover:opacity-80 transition-all duration-300 p-2 rounded-lg z-60 ${
+          className={`text-white text-2xl hover:opacity-80 transition-all duration-300 p-2 rounded-lg z-[60] ${
             isScrolled 
-              ? "bg-black/20 backdrop-blur-sm" 
-              : "bg-black/20 backdrop-blur-sm"
+              ? "bg-black/30 backdrop-blur-sm" 
+              : "bg-black/30 backdrop-blur-sm"
           }`}
           aria-label="Open Menu"
         >
@@ -77,16 +81,16 @@ function Header() {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
+            {/* Backdrop - Higher z-index */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/70 backdrop-blur-md z-50"
+              className="fixed inset-0 bg-black/80 backdrop-blur-lg z-[100]"
             />
             
-            {/* Drawer Panel */}
+            {/* Drawer Panel - Highest z-index */}
             <motion.aside
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -95,7 +99,7 @@ function Header() {
                 duration: 0.3, 
                 ease: "easeOut" 
               }}
-              className="fixed top-0 right-0 w-80 h-full bg-gradient-to-b from-gray-900 to-gray-800 text-white z-50 shadow-2xl flex flex-col overflow-hidden"
+              className="fixed top-0 right-0 w-80 h-full bg-gradient-to-b from-gray-900 to-gray-800 text-white z-[101] shadow-2xl flex flex-col overflow-hidden"
             >
               {/* Drawer Header */}
               <div className="flex justify-between items-center p-6 border-b border-gray-700 bg-gray-900">
