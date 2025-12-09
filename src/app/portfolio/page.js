@@ -6,7 +6,7 @@ export default function Projects() {
     {
       title: 'Echoes of Thoughts',
       image: "/images/project5.JPG",
-      liveLink: 'https://echoesofthoughts.vercel.app/',
+      liveLink: 'https://blog-eot.vercel.app/',
       githubLink: 'https://github.com/MahnoorKhushbakht/blog.git',
       tags:['Next.js','React.js','Tailwind','Mongodb','Firebase','Prisma ORM','Strapi CMS','NextUI']
     },
@@ -20,14 +20,14 @@ export default function Projects() {
     {
       title: 'Tailored Gents',
       image: "/images/project3.JPG",
-      liveLink: 'https://tailored-gents.vercel.app/',
+      liveLink: 'https://clothing-tailored-gents.vercel.app/',
       githubLink: 'https://github.com/MahnoorKhushbakht/tailored-gents.git',
       tags:['Next.js','React.js','Tailwind','Mongodb','Wordpress','JWT','Tailwind']
     },
     {
       title: 'Market Minds',
       image: "/images/project4.JPG",
-      liveLink: 'https://marketminds.vercel.app/',
+      liveLink: 'https://bsolutions.netlify.app/',
       githubLink: 'https://github.com/MahnoorKhushbakht/BSolutions.git',
       tags:['Next.js','React.js','Tailwind','Mongodb','MaterialUI','Pigeon-Maps']
     },
